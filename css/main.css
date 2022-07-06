@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* custom props */
+:root {
+    --three-color: #333;
+    --title-color: #000;
+    --text-color: #777;
+    --white-color: #fff;
+    --brand-color: #ea625c;
+    --font-family: 'Roboto', 'Arial', sans-serif;
+}
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+.container {
+    width: 100%;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* header sections styles */
+.header {
+    padding: 30px 0;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.header__logo {
+    display: flex;
+    margin-right: auto;
+}
+.header__logo:hover {
+    opacity: 0.8;
+}
+.header__logo:active {
+    opacity: 0.6;
+}
+.header-logo__img {
+    width: 35px;
+    height: 42px;
+    object-fit: contain;
+}
+.sitenav {
+    margin-right: 40px;
+}
+.sitenav__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.sitenav__item:not(:last-child) {
+    margin-right: 30px;
+}
+.sitenav__link {
+    text-decoration: none;
+    color: var(--three-color);
+    font-size: 15px;
+    line-height: 22.5px;
+}
+.header-form__input {
+    border: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--three-color);
+}
+/* main sections styles */
+.site-main {
+    flex-grow: 1;
+}
+/* hero sections styles */
+.hero {
+    background-image: url('../imgs/intro-bg.png');
+    background-repeat: no-repeat;
+    background-size: 587px 565px;
+    background-position: calc(50% + 538.5px);
+}
+.hero__container {
+    padding-top: 170px;
+    padding-bottom: 180px;
+    display: flex;
+    align-items: center;
+}
+.main__text-wrapper {
+    width: 100%;
+    max-width: 490px;
+}
+.main-text-wrapper__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--title-color);
+    margin-bottom: 30px;
+}
+.main-text-wrapper__text {
+    padding-left: 40px;
+    border-left: 3px solid #888;
+    margin-bottom: 30px;
+}
+.main-text-wrapper__btn {
+    padding: 12px 38px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--brand-color);
+    transition: all 0.3s;
+}
+.main-text-wrapper__btn:hover {
+    background-color: var(--title-color);
+    color: #ea625c;
+}
+.main-text-wrapper__btn:active {
+    opacity: 0.8;
+}
+/* features sections styles */
+.features {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.features__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.features__item {
+    width: 100%;
+    max-width: 280px;
+}
+.features-item__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--title-color);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.features-item__text {
+    font-size: 15px;
+    color: var(--three-color);
+    margin-bottom: 20px;
+}
+.features__item span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+    box-shadow: 18px 0 #ddd, 36px 0 #ddd;
+}
+.features-item__btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: 700;
+    line-height: 25px;
+    color: var(--brand-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.features-item__btn::before {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: var(--brand-color);
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+.features-item__btn:hover::before {
+    width: 50px;
+} 
+/* nike sections style */
+.nike {
+    padding: 70px 0;
+}
+.nike__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nike__btn {
+    padding: 12px 90px;
+}
+/* footer sections styles */
+.footer {
+    padding-top: 240px;
+    padding-bottom: 240px;
+    background-image: url('../imgs/runners.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.footer__container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__title {
+    color: var(--white-color);
+}
+
+.footer__text {
+    color: var(--white-color);
+    border-left: var(--white-color) 3px solid;
+}
+
+.footer__btn {
+    color: var(--white-color);
+}
